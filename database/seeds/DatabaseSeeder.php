@@ -15,25 +15,25 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Megamall Yerevan City',
                 'username' => 'megamall',
-                'password' => \Illuminate\Support\Facades\Hash::make('ab120100ba'),
+                'password' => \Illuminate\Support\Facades\Hash::make(env('DB_UPASS_1')),
                 'super' => 0
             ],
             [
                 'name' => 'Tsereteli Yerevan City',
                 'username' => 'tsereteli',
-                'password' => \Illuminate\Support\Facades\Hash::make('da047065ad'),
+                'password' => \Illuminate\Support\Facades\Hash::make(env('DB_UPASS_2')),
                 'super' => 0
             ],
             [
                 'name' => 'Komitas Yerevan City',
                 'username' => 'komitas',
-                'password' => \Illuminate\Support\Facades\Hash::make('uj586704ju'),
+                'password' => \Illuminate\Support\Facades\Hash::make(env('DB_UPASS_3')),
                 'super' => 0
             ],
             [
                 'name' => 'Admin',
                 'username' => 'admin',
-                'password' => \Illuminate\Support\Facades\Hash::make('ad0000da!!'),
+                'password' => \Illuminate\Support\Facades\Hash::make(env('DB_UPASS_SUPER')),
                 'super' => 1
             ],
         ]);
