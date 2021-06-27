@@ -25,7 +25,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/home?tab=form';
+
+    public function username()
+    {
+        return 'username';
+    }
+
+    public function showLoginForm()
+    {
+        return view('login');
+    }
 
     /**
      * Create a new controller instance.
