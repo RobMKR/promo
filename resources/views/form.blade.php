@@ -1,4 +1,4 @@
-<form method="POST" action="/form">
+<form id="form" method="POST" action="/form">
     {{ csrf_field() }}
 
     <div class="row" style="margin-top: 15px;">
@@ -40,3 +40,14 @@
         <button type="submit" class="btn btn-success">Send</button>
     </div>
 </form>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        $('#form').on('submit', function (e) {
+            $(this).find('button[type="submit"]').attr('disabled', 'disabled');
+        });
+    });
+</script>
